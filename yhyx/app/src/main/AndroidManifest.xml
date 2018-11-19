@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest package="com.cheapest.lansu.cheapestshopping"
+          xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools">
+
+    <!--Tenxun Bug-->
+    <uses-permission android:name="android.permission.READ_LOGS"/>
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.CONTROL_KEYGUARD"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.FLASHLIGHT"/>
+
+    <uses-feature android:name="android.hardware.camera"/>
+    <uses-feature android:name="android.hardware.camera.autofocus"/>
+
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="com.cheapest.lansu.cheapestshopping.permission.JPUSH_MESSAGE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/> <!-- 用于开启 debug 版本的应用在6.0 系统上 层叠窗口权限 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS"/>
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+
+    <application
+        android:name=".view.App"
+        android:allowBackup="true"
+        android:configChanges="screenSize"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:replace="android:allowBackup">
+        <activity android:name=".view.activity.MainActivity"/>
+        <activity android:name=".view.activity.LoginActivity"/>
+        <activity android:name=".view.activity.RegisterActivity"/>
+        <activity android:name=".view.activity.ForgetPasswordActivity"/>
+        <activity android:name=".view.activity.NewPasswordActivity"/>
+        <activity android:name=".view.activity.UserProtocolActivity"/>
+        <activity android:name=".view.activity.MessageActivity"/>
+        <activity android:name=".view.activity.ProductSumActivity"/>
+        <activity android:name=".view.activity.MyInformationActivity"/>
+        <activity android:name=".view.activity.SettingActivity"/>
+        <activity android:name=".view.activity.AboutUsActivity"/>
+        <activity android:name=".view.activity.MemberRewardsActivity"/>
+        <activity android:name=".view.activity.ConsumptionPointsActivity"/>
+        <activity android:name=".view.activity.MyWalletActivity"/>
+        <activity android:name=".view.activity.WithDrawActivity"/>
+        <activity android:name=".view.activity.AlipayManageActivity"/>
+        <activity android:name=".view.activity.BinderPhoneActivity"/>
+        <activity android:name=".view.activity.MemberBenefitsActivity"/>
+        <activity android:name=".view.activity.ShaiShaiActivity"/>
+        <activity android:name=".view.activity.MyTeamActivity"/>
+        <activity android:name=".view.activity.TeamDetailActivity"/>
+        <activity android:name=".view.activity.PropagandaActivity"/>
+        <activity android:name=".view.activity.CollectAndReferActivity"/>
+        <activity android:name=".view.activity.AddressManagerActivity"/>
+        <activity android:name=".view.activity.AddAddressActivity"/>
+        <activity android:name=".view.activity.MemberRankActivity"/>
+        <activity android:name=".view.activity.CustomerCenterActivity"/>
+        <activity android:name=".view.activity.ExchangeDetailActivity"/>
+        <activity android:name=".view.activity.ExchangeOrderActivity"/>
+        <activity android:name=".view.activity.NewsListActivity"/>
+        <activity android:name=".view.activity.PreferenceRankActivity"/>
+        <activity android:name=".view.activity.CollageActivity"/>
+        <activity android:name=".view.activity.SignInActivity"/>
+        <activity android:name=".view.activity.CollageDetailActivity"/>
+
+        <activity
+            android:name=".view.activity.GoodsDetailActivity"
+            android:hardwareAccelerated="true"/>
+        <activity android:name=".view.activity.SearchActivity"/>
+        <activity android:name=".view.activity.BrandSpecialActivity"/>
+        <activity android:name=".view.activity.InvateActivity"/>
+        <activity android:name=".view.activity.ToBeVIPActivity"/>
+        <activity android:name=".view.activity.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".view.activity.WebActivity"/>
+        <activity android:name=".view.activity.WithDrawKnowActivity"/>
+        <activity android:name=".view.activity.ScannerActivity"/>
+        <activity android:name=".view.activity.BrowseActivity"/>
+        <activity android:name=".view.activity.GuidePageActivity"/>
+        <activity android:name=".view.activity.TodayCommendActivity"/>
+
+        <service
+            android:name="cn.jpush.android.service.PushService"
+            android:process=":multiprocess"
+            tools:node="replace"/>
+
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden"
+            tools:replace="android:configChanges"/>
+        <activity
+            android:name="com.alipay.sdk.app.H5AuthActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity android:name=".view.activity.ShowPictureActivity"/>
+        <activity android:name=".view.activity.ShareComissionActivity"/>
+        <activity android:name="com.cheapest.lansu.cheapestshopping.view.activity.ThirdPartyAuthorizationActivity"></activity>
+        <activity
+            android:name="com.cheapest.lansu.cheapestshopping.wxapi.WXEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            ></activity>
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+
+                <data android:scheme="tencent101475401"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="behind"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar">
+        </activity>
+
+        <!--二期页面-->
+        <activity android:name=".view.activity.ShareNoticeActivity"/>
+        <activity android:name=".view.fragment.strategy.StrategyActivity"/>
+        <activity android:name=".view.activity.NewsDetailActivity"/>
+        <activity android:name=".view.activity.FeedBackActivity"/>
+        <activity android:name=".view.activity.HomeMenuTwoActivity"/>
+        <activity android:name=".view.activity.LoveLifeActivity"/>
+        <activity android:name=".view.activity.SearchMainActivity"/>
+        <activity android:name=".view.activity.WholeSearchActivity"/>
+        <activity android:name=".view.activity.TbkGoodsDetailActivity"/>
+        <activity android:name=".view.activity.ShareFriendActivity"/>
+        <activity android:name=".view.activity.VideoActivity"/>
+
+    </application>
+
+</manifest>

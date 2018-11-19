@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:scaleType="fitCenter"
+        android:src="@mipmap/dialog_exchange_order_bg"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp">
+
+        <ImageView
+            android:id="@+id/iv_dialog_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:padding="@dimen/dp_10"
+            android:src="@mipmap/dialog_close"/>
+
+        <LinearLayout
+            android:id="@+id/layout_exchange_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iv_dialog_close"
+            android:layout_marginLeft="@dimen/dp_40"
+            android:layout_marginRight="@dimen/dp_40"
+            android:background="@drawable/shape_corners_white_bg"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingBottom="30dp"
+            android:paddingTop="30dp">
+
+            <LinearLayout
+                android:layout_width="70dp"
+                android:layout_height="65dp"
+                android:background="@mipmap/iv_signin_info_bg"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:paddingTop="12dp">
+
+                    <TextView
+                        android:id="@+id/tv_signin_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:text="6"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp_16"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@id/tv_signin_num"
+                        android:layout_marginBottom="@dimen/dp_2"
+                        android:layout_toRightOf="@id/tv_signin_num"
+                        android:text="天"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp_12"/>
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tv_add_jindou"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="+1金豆"
+                    android:textColor="@color/white"
+                    android:textSize="10sp"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="签到成功！"
+                android:textColor="#FD5969"
+                android:textSize="@dimen/sp_16"/>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    android:background="@android:color/white"
+
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="140dp">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+
+  <ImageView
+      android:id="@+id/item_home_pro_image"
+       android:scaleType="centerCrop"
+      android:layout_margin="10dp"
+      android:layout_width="118dp"
+      android:layout_height="118dp"
+      />
+   <RelativeLayout
+       android:layout_margin="10dp"
+       android:layout_weight="1"
+       android:layout_width="0dp"
+       android:layout_height="wrap_content">
+       <TextView
+           android:lines="2"
+           android:ellipsize="end"
+           android:gravity="bottom"
+           android:id="@+id/item_home_pro_title"
+           android:lineSpacingExtra="4dp"
+           android:textColor="#333333"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content">
+
+       </TextView>
+
+<RelativeLayout
+    android:id="@+id/rl"
+    android:orientation="horizontal"
+    android:layout_alignParentRight="true"
+    android:layout_alignParentBottom="true"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <LinearLayout
+          android:layout_centerVertical="true"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_marginTop="5dp"
+            android:paddingBottom="1dp"
+            android:paddingRight="5dp"
+            android:paddingLeft="5dp"
+            android:paddingTop="1dp"
+            android:textSize="12sp"
+            android:textColor="@android:color/white"
+            android:background="@drawable/bg_corner_stamps"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="券后价"
+            />
+        <TextView
+            android:id="@+id/item_home_pro_quanhoujia"
+            android:layout_marginLeft="5dp"
+            android:layout_gravity="bottom"
+            android:textColor="@color/colorPrimary"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+  <TextView
+      android:layout_alignParentRight="true"
+      android:id="@+id/item_home_pro_quan"
+      android:background="@mipmap/quan"
+      android:layout_marginTop="5dp"
+          android:gravity="center"
+      android:textColor="@android:color/white"
+        android:textSize="12sp"
+        android:layout_width="65dp"
+        android:layout_height="25dp"
+        android:text="-元券"/>
+
+</RelativeLayout>
+       <RelativeLayout
+
+           android:orientation="vertical"
+           android:layout_above="@+id/rl"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content">
+           <LinearLayout
+               android:orientation="horizontal"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content">
+               <TextView
+                   android:textSize="12sp"
+                   android:text="原价"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   />
+               <TextView  android:textSize="12sp"
+
+                   android:id="@+id/item_home_pro_yuanjia"
+                   android:layout_marginLeft="7dp"
+                   android:text="- -"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   />
+           </LinearLayout>
+           <TextView
+               android:layout_alignParentRight="true"
+               android:id="@+id/item_home_xiaoliang"
+               android:textSize="12sp"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="月销  --"/>
+       </RelativeLayout>
+   </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

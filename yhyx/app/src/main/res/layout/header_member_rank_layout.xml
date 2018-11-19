@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="170dp"
+    android:background="@color/bg_gray">
+
+    <View
+        android:id="@+id/line10"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_10" />
+
+    <LinearLayout
+        android:id="@+id/layout_rank"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_below="@id/line10"
+        android:background="@mipmap/member_rank_bg"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="71dp"
+                android:layout_height="66dp"
+                android:layout_marginTop="22dp">
+
+                <com.cheapest.lansu.cheapestshopping.view.custom.CircleImageView
+                    android:id="@+id/iv_user_face_02"
+                    android:layout_width="52dp"
+                    android:layout_height="52dp"
+                    android:layout_centerInParent="true"
+                    android:src="@mipmap/icon_tuxiang_2" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@mipmap/icon_rank_02" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_user_name_02"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="黄文岳"
+                android:textSize="@dimen/sp_13" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp">
+
+                <TextView
+                    android:id="@+id/tv_reward_hint"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="奖励："
+                    android:textSize="@dimen/sp_13" />
+
+                <TextView
+                    android:id="@+id/tv_reward_num_02"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/tv_reward_hint"
+                    android:text="666.00"
+                    android:textColor="#DF3F67"
+                    android:textSize="@dimen/sp_13" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="78dp"
+                android:layout_height="73dp"
+                android:layout_marginTop="10dp">
+
+                <com.cheapest.lansu.cheapestshopping.view.custom.CircleImageView
+                    android:id="@+id/iv_user_face_01"
+                    android:layout_width="52dp"
+                    android:layout_height="52dp"
+                    android:layout_centerInParent="true"
+                    android:src="@mipmap/icon_tuxiang_2" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@mipmap/icon_rank_01" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_user_name_01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="请叫我码农哥"
+                android:textSize="@dimen/sp_13" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp">
+
+                <TextView
+                    android:id="@+id/tv_reward_02_hint"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="奖励："
+                    android:textSize="@dimen/sp_13" />
+
+                <TextView
+                    android:id="@+id/tv_reward_num_01"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/tv_reward_02_hint"
+                    android:text="666.00"
+                    android:textColor="#DF3F67"
+                    android:textSize="@dimen/sp_13" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="71dp"
+                android:layout_height="66dp"
+                android:layout_marginTop="22dp">
+
+                <com.cheapest.lansu.cheapestshopping.view.custom.CircleImageView
+                    android:id="@+id/iv_user_face_03"
+                    android:layout_width="52dp"
+                    android:layout_height="52dp"
+                    android:layout_centerInParent="true"
+                    android:src="@mipmap/icon_tuxiang_2" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@mipmap/icon_rank_03" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_user_name_03"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="李紫晴"
+                android:textSize="@dimen/sp_13" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp">
+
+                <TextView
+                    android:id="@+id/tv_reward_03_hint"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="奖励："
+                    android:textSize="@dimen/sp_13" />
+
+                <TextView
+                    android:id="@+id/tv_reward_num_03"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/tv_reward_03_hint"
+                    android:text="666.00"
+                    android:textColor="#DF3F67"
+                    android:textSize="@dimen/sp_13" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_10"
+        android:layout_below="@id/layout_rank" />
+</RelativeLayout>

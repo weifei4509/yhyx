@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.cheapest.lansu.cheapestshopping.view.custom.ObservableScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp">
+
+        <TextView
+            android:id="@+id/tv_signin"
+            android:layout_width="77dp"
+            android:layout_height="77dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/shape_sign_in_background"
+            android:gravity="center"
+            android:text="@string/sign_in"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_14"/>
+
+        <TextView
+            android:id="@+id/tv_current_date"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/shape_month_background"
+            android:gravity="center"
+            android:text="6月"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_14"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30.0dp"
+            android:background="@color/white">
+
+            <TextView
+                style="@style/weekName"
+                android:text="日"/>
+
+            <TextView
+                style="@style/weekName"
+                android:text="一"/>
+
+            <TextView
+                style="@style/weekName"
+                android:text="二"/>
+
+            <TextView
+                style="@style/weekName"
+                android:text="三"/>
+
+            <TextView
+                style="@style/weekName"
+                android:text="四"/>
+
+            <TextView
+                style="@style/weekName"
+                android:text="五"/>
+
+            <TextView
+                style="@style/weekName"
+                android:text="六"/>
+
+        </LinearLayout>
+
+        <GridView
+            android:id="@+id/gridView"
+            android:layout_width="match_parent"
+            android:layout_height="230dp"
+            android:background="@color/white"
+            android:columnWidth="46dp"
+            android:maxHeight="276dp"
+            android:numColumns="7"
+            android:scrollbars="none"
+            android:stretchMode="columnWidth"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:gravity="center_horizontal">
+
+            <LinearLayout
+                android:id="@+id/layout_jindou"
+                android:layout_width="92dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15dp"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:background="@drawable/shape_button_save_bg"
+                    android:gravity="center"
+                    android:text="我的金豆"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_13"/>
+
+                <TextView
+                    android:id="@+id/tv_jindou_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="0"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/sp_12"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_lianxu"
+                android:layout_width="92dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@id/layout_jindou"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:background="@drawable/shape_button_save_bg"
+                    android:gravity="center"
+                    android:text="已连续签到"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_13"/>
+
+                <TextView
+                    android:id="@+id/tv_lianxu_days"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="0天"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/sp_12"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginTop="12dp">
+
+            <TextView
+                android:id="@+id/tv_guize"
+                android:layout_width="92dp"
+                android:layout_height="30dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/bg_corner_get_sms"
+                android:gravity="center"
+                android:text="签到规则"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_14"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/tv_guize"
+                android:background="#CBCBCD"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/tv_guize"
+                android:background="#CBCBCD"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:gravity="left|center"
+            android:lineSpacingExtra="5dp"
+            android:text="@string/sign_in_rule"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_13"/>
+
+    </LinearLayout>
+
+</com.cheapest.lansu.cheapestshopping.view.custom.ObservableScrollView>

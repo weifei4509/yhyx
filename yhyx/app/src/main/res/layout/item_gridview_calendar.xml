@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/tv_user_unsign"
+            android:layout_width="46dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="01"
+            android:textColor="@color/black"
+            android:textSize="14sp"/>
+
+        <ImageView
+            android:id="@+id/iv_user_signin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/icon_user_signin_bg"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+</FrameLayout>
+
+
+    <!--<?xml version="1.0" encoding="utf-8"?>-->
+    <!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--android:layout_width="fill_parent"-->
+    <!--android:layout_height="55dp"-->
+    <!--android:background="@color/transparent"-->
+    <!--android:gravity="center"-->
+    <!--android:orientation="vertical" >-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/tvtext"-->
+    <!--android:layout_width="46dp"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:gravity="center"-->
+    <!--android:textSize="12sp" />-->
+
+    <!--<FrameLayout-->
+    <!--android:layout_width="46.0dip"-->
+    <!--android:layout_height="wrap_content" >-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/tv_user_unsign"-->
+    <!--android:layout_width="46.0dip"-->
+    <!--android:layout_height="33.0dip"-->
+    <!--android:gravity="center"-->
+    <!--android:textColor="#ffc66a18"-->
+    <!--android:textSize="12sp"-->
+    <!--android:visibility="invisible" />-->
+
+    <!--<RelativeLayout-->
+    <!--android:layout_width="fill_parent"-->
+    <!--android:layout_height="28.0dip"-->
+    <!--android:gravity="center" >-->
+
+    <!--<ImageView-->
+    <!--android:id="@+id/iv_user_sign"-->
+    <!--android:layout_width="24.0dip"-->
+    <!--android:layout_height="17.0dip"-->
+    <!--android:adjustViewBounds="true"-->
+    <!--android:src="@drawable/image_user_sign_bg"-->
+    <!--android:visibility="invisible" />-->
+    <!--</RelativeLayout>-->
+    <!--</FrameLayout>-->
+
+    <!--</LinearLayout>-->

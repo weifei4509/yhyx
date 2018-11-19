@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/statusbar_padding">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:elevation="1dp"
+        android:gravity="center_vertical"
+        android:minHeight="?android:attr/actionBarSize">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="28dp"
+            android:layout_marginLeft="44.0dp"
+            android:layout_marginRight="44.0dp"
+            android:layout_toLeftOf="@id/lin_fragment_home_message"
+            android:layout_toRightOf="@+id/lin_fragment_home_scanner">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:alpha="0.35"
+                android:background="@drawable/bg_corner_search"/>
+
+            <ImageView
+                android:id="@+id/iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:src="@mipmap/icon_search"/>
+
+            <TextView
+                android:id="@+id/tv_search"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_toRightOf="@+id/iv"
+                android:background="@android:color/transparent"
+                android:text="输入商品关键词，搜索商品优惠券"
+                android:textColor="@android:color/white"
+                android:textSize="12sp"/>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="1.1"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/dp_10"
+                android:gravity="center_vertical"
+                android:text="全部分类"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_14"/>
+
+            <ListView
+                android:id="@+id/list_menu"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="@color/transparent"
+                android:dividerHeight="0px"
+                android:scrollbars="none"/>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:background="@color/bg_gray"
+            android:orientation="vertical">
+
+            <com.cheapest.lansu.cheapestshopping.view.custom.ObservableScrollView
+                android:id="@+id/scrollView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/dp_10"
+                    android:paddingRight="@dimen/dp_10">
+
+                    <TextView
+                        android:id="@+id/tv_hot_type"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="@dimen/dp_10"
+                        android:background="@color/bg_gray"
+                        android:gravity="center_vertical"
+                        android:text="热卖分类"/>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/hot_rlv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/dp_10"
+                            android:layout_marginTop="@dimen/dp_10"
+                            android:background="@drawable/shape_corners_white_bg"
+                            android:paddingBottom="@dimen/dp_10"
+                            android:paddingTop="@dimen/dp_10"/>
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/tv_all_type"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:background="@color/bg_gray"
+                        android:gravity="center_vertical"
+                        android:text="全部分类"/>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/all_rlv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/dp_10"
+                            android:layout_marginTop="@dimen/dp_10"
+                            android:background="@drawable/shape_corners_white_bg"
+                            android:paddingBottom="@dimen/dp_10"
+                            android:paddingTop="@dimen/dp_10"/>
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+
+            </com.cheapest.lansu.cheapestshopping.view.custom.ObservableScrollView>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,166 @@
+apply plugin: 'com.android.application'
+def apkName;
+// 打包时间
+def releaseTime() {
+    return new Date().format("yyyyMMddHHmmss", TimeZone.getTimeZone("GMT+8"))
+}
+
+android {
+    compileSdkVersion 27
+    defaultConfig {
+        multiDexEnabled true
+        applicationId "com.cheapest.lansu.cheapestshopping"
+        minSdkVersion 14
+        targetSdkVersion 27
+        versionCode 203
+        versionName "2.0.3"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        javaCompileOptions { annotationProcessorOptions { includeCompileClasspath = true } }
+
+        ndk {
+            //选择要添加的对应cpu类型的.so库。, 'arm64-v8a', 'x86'
+            abiFilters 'armeabi', 'armeabi-v7a'
+            // 还可以添加 , 'x86_64', 'mips', 'mips64'
+        }
+        manifestPlaceholders = [
+                JPUSH_PKGNAME: applicationId,
+                JPUSH_APPKEY : "db78ca1bf24948bd9c7e9cfa", //JPush上注册的包名对应的appkey.
+                JPUSH_CHANNEL: "developer-default", //暂时填写默认值即可.
+        ]
+
+    }
+    signingConfigs {
+        config {
+            keyAlias "cheapest"
+            keyPassword "cheapest1216"
+            storeFile file('cheapest.jks')
+            storePassword 'cheapest1216'
+        }
+    }
+    packagingOptions {
+        pickFirst 'META-INF/*'
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config
+            apkName = "Android_" + defaultConfig.versionName + "_" + releaseTime() + "_release.apk";
+            // 修改apk build的名字
+            applicationVariants.all { variant ->
+                variant.outputs.all { output ->
+                    def outputFile = output.outputFile
+                    if (outputFile != null && outputFile.name.endsWith('.apk')) {
+                        // apk_渠道名-版本号-版本名称-编译时间.apk
+                        outputFileName = apkName;
+
+                    }
+                }
+            }
+        }
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config
+            apkName = "Android_" + defaultConfig.versionName + "_" + releaseTime() + "_debug.apk";
+            // 修改apk build的名字
+            applicationVariants.all { variant ->
+                variant.outputs.all { output ->
+                    def outputFile = output.outputFile
+                    if (outputFile != null && outputFile.name.endsWith('.apk')) {
+                        // apk_渠道名-版本号-版本名称-编译时间.apk
+                        outputFileName = apkName;
+                    }
+                }
+            }
+        }
+    }
+    compileOptions {
+        targetCompatibility 1.8
+        sourceCompatibility 1.8
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.0'
+    implementation 'com.android.support:support-v4:27.1.1'
+    testCompile 'junit:junit:4.12'
+    androidTestCompile 'com.android.support.test:runner:1.0.1'
+    androidTestCompile 'com.android.support.test.espresso:espresso-core:3.0.1'
+    implementation 'com.squareup.retrofit2:retrofit:2.2.0'
+    //  retrofit
+    implementation 'com.squareup.retrofit2:converter-gson:2.2.0'
+    //gson convert
+    implementation 'com.squareup.retrofit2:adapter-rxjava:2.1.0'
+    //RxJava adapter
+    implementation 'io.reactivex:rxandroid:1.2.1'
+    implementation 'com.jakewharton:butterknife:7.0.1'
+    implementation 'com.android.support:design:27.1.1'
+    implementation 'com.youth.banner:banner:1.4.9'
+    //banner
+    implementation 'com.github.bumptech.glide:glide:3.7.0'
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.30'
+    implementation 'com.squareup.picasso:picasso:2.5.2'
+    implementation 'com.jph.takephoto:takephoto_library:3.0.0'
+    implementation 'com.allenliu.versionchecklib:library:2.0.3'
+    //app升级
+    implementation 'com.yanzhenjie:permission:1.0.5'
+    //权限授权
+    implementation 'cn.yipianfengye.android:zxing-library:2.2'
+    implementation 'com.jaeger.statusbarutil:library:1.5.1'
+    implementation 'cn.jiguang.sdk:jpush:3.1.1'
+    // 此处以JPush 3.1.1 版本为例。
+    implementation 'cn.jiguang.sdk:jcore:1.1.9'
+    // 此处以JCore 1.1.9 版本为例。
+    implementation files('libs/alipaySdk-20180403.jar')
+    implementation files('libs/httpclient-4.5.2.jar')
+    implementation files('libs/httpcore-4.3.3.jar')
+    implementation files('libs/httpmime-4.3.6.jar')
+    implementation files('libs/universal-image-loader-1.9.5.jar')
+    implementation files('libs/libammsdk.jar')
+    //fastjson
+    implementation 'com.alibaba:fastjson:1.2.9'
+    //登陆
+    implementation 'com.ali.auth.sdk:alibabauth_core:1.1.4@jar'
+    implementation 'com.ali.auth.sdk:alibabauth_ui:1.1.4@aar'
+    implementation 'com.ali.auth.sdk:alibabauth_ext:1.1.4@jar'
+    //【可选】仅供特殊合作伙伴使用
+    implementation 'com.ali.auth.sdk:alibabauth_accountlink:1.1.4@jar'
+    //安全基础
+    implementation 'com.taobao.android:securityguardaar3:5.1.81@aar'
+    //【可选】安全高级，如使用了发放红包、优惠券高级功能，则必须引入
+    implementation 'com.taobao.android:securitybodyaar3:5.1.25@aar'
+    //Mtop网关
+    implementation 'com.taobao.android:mtopsdk_allinone_open:1.2.2.4@jar'
+    //applink
+    implementation 'com.taobao.android:alibc_applink:2.0.0.9@jar'
+    //UT
+    implementation 'com.taobao.android:utdid4all:1.1.5.3_proguard@jar'
+    implementation 'com.alibaba.mtl:app-monitor-sdk:2.5.1.3_for_bc_proguard@jar'
+    //电商SDK
+    implementation 'com.alibaba.sdk.android:alibc_trade_sdk:3.1.1.11@aar'
+    implementation files('libs/open_sdk_r5990_lite.jar')
+    implementation 'com.android.support:multidex:1.0.0'
+    implementation 'com.github.iwgang:countdownview:2.1.5'
+    implementation 'org.jsoup:jsoup:1.9.2'
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.30'
+    implementation files('libs/lite-orm-1.9.2.jar')
+    implementation 'com.baoyz.swipemenulistview:library:1.3.0'
+    implementation 'com.lcodecorex:tkrefreshlayout:1.0.7'
+    implementation 'com.sina.weibo.sdk:core:4.2.7:openDefaultRelease@aar'
+    implementation 'com.tencent.bugly:crashreport:latest.release'
+    implementation 'com.tencent.bugly:nativecrashreport:latest.release'
+
+    //播放器 https://github.com/Bilibili/ijkplayer
+    implementation 'tv.danmaku.ijk.media:ijkplayer-java:0.8.4'
+    implementation 'tv.danmaku.ijk.media:ijkplayer-armv7a:0.8.4'
+    implementation 'tv.danmaku.ijk.media:ijkplayer-armv5:0.8.4'
+    implementation 'tv.danmaku.ijk.media:ijkplayer-x86:0.8.4'
+}

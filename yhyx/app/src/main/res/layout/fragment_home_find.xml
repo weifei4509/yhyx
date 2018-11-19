@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/statusbar_padding"
+    tools:context="com.cheapest.lansu.cheapestshopping.view.fragment.FindFragment">
+
+    <include layout="@layout/layout_head"/>
+
+    <com.cheapest.lansu.cheapestshopping.view.custom.ObservableScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/layout_activity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/item_activity_layout"
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:paddingBottom="@dimen/dp_10"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:paddingTop="@dimen/dp_10">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp">
+
+                        <View
+                            android:id="@+id/tuan_line"
+                            android:layout_width="5dp"
+                            android:layout_height="20dp"
+                            android:layout_marginTop="5dp"
+                            android:background="#FA596B"/>
+
+                        <TextView
+                            android:id="@+id/tv_activity_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="6dp"
+                            android:layout_toRightOf="@id/tuan_line"
+                            android:text="省惠拼团"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/sp_14"/>
+
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:id="@+id/iv_pintuan"
+                        android:layout_width="match_parent"
+                        android:layout_height="140dp"
+                        android:layout_marginTop="@dimen/dp_6"
+                        android:background="#f5f5f5"
+                        android:scaleType="fitXY"
+                        android:src="@mipmap/icon_pintuan_bg"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:paddingBottom="@dimen/dp_10"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:paddingTop="@dimen/dp_10">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp">
+
+                        <View
+                            android:id="@+id/tuan_line2"
+                            android:layout_width="5dp"
+                            android:layout_height="20dp"
+                            android:layout_marginTop="5dp"
+                            android:background="#FA596B"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="6dp"
+                            android:layout_toRightOf="@id/tuan_line2"
+                            android:text="签到赚金豆"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/sp_14"/>
+
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:id="@+id/iv_sigin"
+                        android:layout_width="match_parent"
+                        android:layout_height="140dp"
+                        android:layout_marginTop="@dimen/dp_6"
+                        android:background="#f5f5f5"
+                        android:scaleType="fitXY"
+                        android:src="@mipmap/icon_signin_bg"/>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="@dimen/dp_10"
+                android:background="@color/white"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="兑换专区"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_14"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="#f5f5f5"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/exchange_recycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#ffffff"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"/>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </com.cheapest.lansu.cheapestshopping.view.custom.ObservableScrollView>
+
+</LinearLayout>

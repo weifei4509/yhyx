@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:padding="15dp"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="编辑分享文案"
+            android:textColor="#ff333333"
+            android:textSize="12dp"
+            />
+        <LinearLayout
+            android:padding="15dp"
+
+            android:layout_marginTop="15dp"
+            android:background="@drawable/bg_corner_white"
+            android:layout_width="match_parent"
+            android:layout_height="245dp">
+           <EditText
+               android:textSize="12sp"
+               android:id="@+id/et_share_msg"
+                android:background="@android:color/transparent"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content" />
+
+        </LinearLayout>
+    <TextView
+        android:layout_gravity="right"
+        android:id="@+id/tv_copy"
+        android:layout_marginTop="10dp"
+        android:paddingBottom="4dp"
+        android:paddingRight="10dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="4dp"
+        android:textSize="12dp"
+        android:textColor="@android:color/white"
+        android:background="@drawable/bg_corner_stamps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="复制分享文案"
+        />
+
+</LinearLayout>

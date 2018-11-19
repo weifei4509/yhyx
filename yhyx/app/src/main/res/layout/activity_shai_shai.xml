@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.cheapest.lansu.cheapestshopping.view.activity.ShaiShaiActivity">
+    <include layout="@layout/layout_head"/>
+  <RelativeLayout
+
+android:layout_margin="10dp"
+      android:background="@drawable/bg_corner_white"
+      android:layout_width="match_parent"
+      android:layout_height="250dp">
+ <EditText
+     android:id="@+id/et_content"
+     android:textSize="14sp"
+     android:hint="编辑文字内容不超过20个字"
+     android:background="@android:color/transparent"
+     android:padding="@dimen/activity_vertical_margin"
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     />
+
+<ImageView
+    android:id="@+id/add_image"
+    android:layout_margin="15dp"
+    android:layout_alignParentBottom="true"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:src="@mipmap/phone_deaaa"/>
+  </RelativeLayout>
+</LinearLayout>

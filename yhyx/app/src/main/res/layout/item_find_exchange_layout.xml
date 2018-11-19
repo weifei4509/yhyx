@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="105dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="105dp"
+        android:layout_marginBottom="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_10"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/iv_album_exchange"
+            android:layout_width="85dp"
+            android:layout_height="match_parent"
+            android:background="#f5f5f5"/>
+
+        <TextView
+            android:id="@+id/tv_exchange_price"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/shape_exchange_button_bg"
+            android:gravity="center_vertical"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:text="129金豆兑换"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_12"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginRight="@dimen/dp_10"
+            android:layout_toLeftOf="@id/tv_exchange_price"
+            android:layout_toRightOf="@id/iv_album_exchange"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_exchange_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="爱奇艺VIP会员1个月"
+                android:textColor="#747273"
+                android:textSize="@dimen/sp_13"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_2">
+
+                <TextView
+                    android:id="@+id/tv_exchange_hint"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="已兑换"
+                    android:textColor="#747273"
+                    android:textSize="@dimen/sp_13"/>
+
+                <TextView
+                    android:id="@+id/tv_exchange_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_toRightOf="@id/tv_exchange_hint"
+                    android:text="22"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/sp_14"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/tv_exchange_num"
+                    android:text="件"
+                    android:textColor="#747273"
+                    android:textSize="@dimen/sp_13"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_2">
+
+                <TextView
+                    android:id="@+id/tv_surplus_hint"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="剩余"
+                    android:textColor="#747273"
+                    android:textSize="@dimen/sp_13"/>
+
+                <TextView
+                    android:id="@+id/tv_surplus_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_toRightOf="@id/tv_surplus_hint"
+                    android:text="55"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/sp_13"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/tv_surplus_num"
+                    android:text="件"
+                    android:textColor="#747273"
+                    android:textSize="@dimen/sp_13"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_2">
+
+                <TextView
+                    android:id="@+id/tv_price_hint"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="价值"
+                    android:textColor="#747273"
+                    android:textSize="@dimen/sp_13"/>
+
+                <TextView
+                    android:id="@+id/tv_price_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_toRightOf="@id/tv_price_hint"
+                    android:text="19"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/sp_13"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/tv_price_num"
+                    android:text="元"
+                    android:textColor="#747273"
+                    android:textSize="@dimen/sp_13"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:background="#f5f5f5"/>
+</RelativeLayout>

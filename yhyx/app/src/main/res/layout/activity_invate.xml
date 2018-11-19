@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".view.activity.InvateActivity">
+    <RelativeLayout
+android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+        <ImageView
+
+            android:id="@+id/iv_image"
+            android:layout_width="match_parent"
+
+            android:scaleType="fitXY"
+            android:layout_height="match_parent" />
+
+
+
+
+    </RelativeLayout>
+<LinearLayout
+     android:background="@drawable/border_write"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:padding="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="130dp">
+<LinearLayout
+android:layout_weight="1"
+    android:orientation="vertical"
+    android:layout_width="0dp"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+
+        <com.cheapest.lansu.cheapestshopping.view.custom.CircleImageView
+            android:id="@+id/iv_icon"
+
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:border_width="0.5dp"
+            app:border_color="@color/colorPrimary"
+
+            android:src="@mipmap/icon_tuxiang_2" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:orientation="vertical"
+
+            >
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+              />
+
+            <TextView
+                android:id="@+id/tv_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <TextView
+        android:layout_marginTop="10dp"
+        android:textColor="@color/colorPrimary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="省惠优选，能省会赚才是王道"/>
+
+
+</LinearLayout>
+    <RelativeLayout
+        android:layout_marginEnd="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/iv_scanner"
+
+
+            android:layout_width="100dp"
+            android:layout_height="100dp" />
+        <TextView
+            android:textSize="12sp"
+            android:background="@drawable/red_circle"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:layout_width="21dp"
+            android:layout_height="21dp"
+            android:text="省"/>
+    </RelativeLayout>
+
+</LinearLayout>
+</LinearLayout>

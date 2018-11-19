@@ -1,0 +1,131 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.cheapest.lansu.cheapestshopping.view.fragment.SearchStampsFragment">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+<RelativeLayout
+
+
+    android:layout_width="match_parent"
+    android:layout_height="190dp">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+       android:src="@mipmap/sosusuo_icon"/>
+
+
+  <LinearLayout
+      android:layout_centerInParent="true"
+      android:orientation="vertical"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+
+      <TextView
+          android:id="@+id/tv_title_1"
+          android:layout_gravity="center_horizontal"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="淘宝/天猫独家优惠券"
+          android:textColor="@android:color/white"
+          android:textSize="20sp"
+
+          />
+ <TextView
+     android:id="@+id/tv_title_2"
+     android:layout_marginTop="10dp"
+     android:layout_gravity="center_horizontal"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="购物最高省90%"
+          android:textColor="@android:color/white"
+          android:textSize="15sp"
+
+          />
+<LinearLayout
+    android:orientation="horizontal"
+    android:background="@drawable/bg_corner_writes"
+    android:layout_marginTop="20dp"
+    android:layout_marginLeft="40dp"
+    android:layout_marginRight="40dp"
+    android:layout_width="match_parent"
+    android:layout_height="35dp">
+  <EditText
+      android:singleLine="true"
+      android:id="@+id/et_input"
+      android:layout_marginLeft="10dp"
+      android:layout_marginRight="10dp"
+      android:hint="输入商品关键词，搜索商品优惠券"
+      android:layout_weight="1"
+     android:layout_centerVertical="true"
+      android:textSize="14sp"
+      android:background="@android:color/transparent"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content" />
+    <TextView
+        android:gravity="center"
+        android:text="搜索"
+        android:id="@+id/btn_search"
+        android:textColor="@android:color/white"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/corner_bg_right"
+        android:layout_width="50dp"
+        android:layout_height="match_parent" />
+
+</LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>
+
+
+
+        <RelativeLayout
+            android:layout_marginTop="10dp"
+            android:padding="@dimen/dp_10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_centerHorizontal="true"
+
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/zhaungshi"/>
+            <TextView
+                android:id="@+id/tv_title_3"
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="省惠优选领券指南"
+                android:textColor="@color/colorPrimary"/>
+        </RelativeLayout>
+        <ImageView
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/how_to_save"/>
+        <ImageView
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/how_to_get_quan"/>
+    </LinearLayout>
+
+
+</ScrollView>

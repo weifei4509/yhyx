@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_pintuan"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:text="马上拼团"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_14"/>
+
+    <com.cheapest.lansu.cheapestshopping.view.custom.ObservableScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/tv_pintuan">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.youth.banner.Banner
+                android:id="@+id/collage_banner"
+                android:layout_width="match_parent"
+                android:layout_height="372dp"
+                app:image_scale_type="fit_xy"
+                app:indicator_drawable_selected="@drawable/text_gridient_theme"
+                app:indicator_drawable_unselected="@drawable/circle_write"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingBottom="10dp"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:paddingTop="10dp">
+
+                <TextView
+                    android:id="@+id/tv_pintuan_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:text="山东红富士苹果4斤"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="28dp">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:id="@+id/tv_pintuan_jia_hint"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:text="拼团价：￥"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/sp_14"/>
+
+                        <TextView
+                            android:id="@+id/tv_pintuan_jia"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@id/tv_pintuan_jia_hint"
+                            android:layout_alignParentBottom="true"
+                            android:layout_toRightOf="@id/tv_pintuan_jia_hint"
+                            android:text="0.00"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="22sp"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/layout_pintuan_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentLeft="true"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:id="@+id/tv_pintuan_num_hint"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:text="已拼："
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/sp_14"/>
+
+                        <TextView
+                            android:id="@+id/tv_pintuan_num"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_toRightOf="@id/tv_pintuan_num_hint"
+                            android:text="0"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/sp_14"/>
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="20dp"
+                        android:layout_toRightOf="@id/layout_pintuan_num"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:id="@+id/tv_stock_num_hint"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:text="剩余："
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/sp_14"/>
+
+                        <TextView
+                            android:id="@+id/tv_stock_num"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_toRightOf="@id/tv_stock_num_hint"
+                            android:text="0"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/sp_14"/>
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recycler_tag"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_10"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_customer_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="#F96973"
+                android:orientation="vertical"
+                android:padding="15dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="拼团进度"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_16"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:gravity="center_horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_collage_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:text="还差4人拼团成功"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp_14"/>
+
+                    <cn.iwgang.countdownview.CountdownView
+                        android:id="@+id/text_time_countdown"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_toRightOf="@id/tv_collage_num"
+                        app:isHideTimeBackground="false"
+                        app:isShowDay="false"
+                        app:isShowHour="true"
+                        app:isShowMillisecond="false"
+                        app:isShowMinute="true"
+                        app:isShowSecond="true"
+                        app:isTimeTextBold="false"
+                        app:suffixGravity="center"
+                        app:suffixTextColor="#000000"
+                        app:suffixTextSize="10sp"
+                        app:timeBgColor="@color/white"
+                        app:timeBgRadius="3dp"
+                        app:timeTextColor="@color/black"
+                        app:timeTextSize="10sp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:layout_toRightOf="@id/text_time_countdown"
+                        android:text="后结束"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp_14"/>
+
+                </RelativeLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:padding="12dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="12dp"
+                    android:text="拼团规则"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="15sp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingExtra="@dimen/dp_6"
+                    android:text="@string/pintuan_rule"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/sp_12"/>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@color/white"
+                android:orientation="vertical"
+                tools:ignore="WebViewLayout">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:gravity="center"
+                    android:text="商品详情"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"/>
+
+                <WebView
+                    android:id="@+id/webView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </com.cheapest.lansu.cheapestshopping.view.custom.ObservableScrollView>
+
+</RelativeLayout>

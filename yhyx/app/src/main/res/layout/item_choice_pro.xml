@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_item_home_pro_bg"
+    android:orientation="vertical"
+    android:padding="@dimen/dp_10">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="169dp">
+
+        <ImageView
+            android:id="@+id/item_home_pro_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"/>
+
+        <TextView
+            android:id="@+id/tv_commision"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_alignParentBottom="true"
+            android:background="#80000000"
+            android:gravity="center"
+            android:text="预估佣金:¥0.00"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_12"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/item_home_pro_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:gravity="bottom"
+        android:lineSpacingExtra="4dp"
+        android:lines="2"
+        android:textColor="#333333"/>
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/item_home_pro_yuanjia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:text="- -"
+            android:textSize="12sp"/>
+
+        <TextView
+            android:id="@+id/item_home_xiaoliang"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="月销  --"
+            android:textSize="12sp"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:paddingBottom="1dp"
+                android:paddingTop="1dp"
+                android:text="券后价"
+                android:textColor="@color/colorPrimary"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:id="@+id/item_home_pro_quanhoujia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:paddingBottom="1dp"
+                android:paddingTop="1dp"
+                android:text=""
+                android:textColor="@color/colorPrimary"
+                android:textSize="12sp"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/item_home_pro_quan"
+            android:layout_width="62dp"
+            android:layout_height="25dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="5dp"
+            android:background="@mipmap/quan"
+            android:gravity="center"
+            android:text="-元券"
+            android:textColor="@android:color/white"
+            android:textSize="12sp"/>
+    </RelativeLayout>
+
+</LinearLayout>

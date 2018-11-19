@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="#fff"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp">
+
+        <TextView
+            android:id="@+id/tv_rank_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="No.4"
+            android:textSize="@dimen/sp_14"/>
+
+        <com.cheapest.lansu.cheapestshopping.view.custom.CircleImageView
+            android:id="@+id/iv_user_icon"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@id/tv_rank_num"
+            android:src="@mipmap/icon_tuxiang"/>
+
+        <RelativeLayout
+            android:id="@+id/layout_jiangli"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true">
+
+            <TextView
+                android:id="@+id/tv_jiangli_hint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="奖励："
+                android:textSize="@dimen/sp_13"/>
+
+            <TextView
+                android:id="@+id/tv_jiangli_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/tv_jiangli_hint"
+                android:text="5000.00"
+                android:textColor="#DF3F67"
+                android:textSize="@dimen/sp_13"/>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_user_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginRight="@dimen/dp_10"
+            android:layout_toLeftOf="@id/layout_jiangli"
+            android:layout_toRightOf="@id/iv_user_icon"
+            android:text="请叫我码农哥"
+            android:textSize="@dimen/sp_13"/>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/bg_gray"/>
+</LinearLayout>

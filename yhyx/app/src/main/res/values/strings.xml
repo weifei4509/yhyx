@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">省惠优选</string>
+    <string name="shopping_man">网购达人</string>
+    <string name="wetchat_login">微信登录</string>
+    <string name="hint_phone">请输入手机号</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="nine_to_nine">9.9专场</string>
+    <string name="search_stmps">搜券</string>
+    <string name="home_title">首页</string>
+    <string name="home_choice">品牌精选</string>
+    <string name="home_classify">分类</string>
+    <string name="home_find">发现</string>
+    <string name="home_mime">我的</string>
+    <string name="show_time">晒晒</string>
+    <string name="call_hotline">拨打电话</string>
+    <string name="cancel_update">取消升级</string>
+    <string name="sign_in">签到\n赚金豆</string>
+    <string name="signed_in">今日\n已签到</string>
+
+    <string name="pintuan_rule">1.免费拼团，1个VIP会员1天只有1次拼团资格。\n2.免费拼团邀请的对象须为未注册过平台账号的新用户。\n3.开始拼团，到个人中心页面设置收货地址，否则视为无效。\n4.拼团成功=2小时完成指定人数的任务。\n5.拼团失败=2小时未能完成指定人数的任务。\n6.商品拼团成功由团长免费获得商品，48小时内寄出。\n7.部分偏远地方和限制地区导致无法发货，敬请见谅。\n8.存在作弊行为的拼团订单视为无效订单。</string>
+
+
+    <string name="sign_in_rule">01 每日签到完成，奖励立即发放\n02 只有注册会员才能享受签到福利\n03 签到每七天翻倍一次</string>
+
+
+    <string name="pickerview_cancel">取消</string>
+    <string name="pickerview_submit">确定</string>
+    <string name="pickerview_year">年</string>
+    <string name="pickerview_month">月</string>
+    <string name="pickerview_day">日</string>
+    <string name="pickerview_hours">时</string>
+    <string name="pickerview_minutes">分</string>
+    <string name="pickerview_seconds">秒</string>
+</resources>

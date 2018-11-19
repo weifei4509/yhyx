@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F86B74"
+    android:orientation="vertical">
+
+    <com.cheapest.lansu.cheapestshopping.view.custom.PagerSlidingTabStrip
+        android:id="@+id/pagerTabStrip"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_40"
+        android:layout_below="@id/v_toolbar_bg"
+        android:background="@color/transparent"
+        app:pstsUnderlineColor="@color/transparent"
+        app:selectedTabTextColor="@color/white"
+        app:unSelectedTabTextColor="@color/unSelectTabColor"/>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/pagerTabStrip"/>
+
+</LinearLayout>
